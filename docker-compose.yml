@@ -1,0 +1,12 @@
+version: '3'
+services:
+  rapidsai:
+    image: rapidsai/rapidsai:23.06-cuda11.8-runtime-ubuntu22.04-py3.10
+    runtime: nvidia
+    ports:
+      - "8888:8888"
+      - "8787:8787"
+      - "8786:8786"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    command: /bin/bash -c "jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root"
