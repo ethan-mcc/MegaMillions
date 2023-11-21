@@ -1,6 +1,0 @@
-version: 1
-bundles:
-  my_custom_data:
-    csvdir:
-      us_futures:
-        daily: ESU21-23.csv
